@@ -21,7 +21,19 @@ private:
 };
 
 template <class T>
-MaxHeap<T>::MaxHeap(int mx) {
-
+MaxHeap<T>::MaxHeap(int mx)
+{
+    if(currentSize == maxSize)
+        throw "alread reach max";
+    maxSize = mx;
+    heapArray = new T[maxSize];
 }
+
+template <class T>
+MaxHeap<T>::~MaxHeap()
+{
+    delete[] heapArray;
+}
+
+
 #endif
