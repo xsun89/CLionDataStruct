@@ -1,7 +1,7 @@
 #ifndef _MAX_HEAP_
 #define _MAX_HEAP_
 
-template <class T>
+template <Type T>
 class MaxHeap
 {
 public:
@@ -20,4 +20,8 @@ private:
     void trickleDown(int index);
 };
 
+template <class T>
+MaxHeap<T>::MaxHeap(int mx) {
+
+}
 #endif
