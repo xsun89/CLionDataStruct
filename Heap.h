@@ -1,7 +1,7 @@
 #ifndef _MAX_HEAP_
 #define _MAX_HEAP_
 
-template <Type T>
+template <class T>
 class MaxHeap
 {
 public:
@@ -35,5 +35,16 @@ MaxHeap<T>::~MaxHeap()
     delete[] heapArray;
 }
 
+template <class T>
+bool MaxHeap<T>::IsEmpty()
+{
+    return currentSize==0;
+}
+
+template <class T>
+void MaxHeap<T>::Push(const T &)
+{
+
+}
 
 #endif
