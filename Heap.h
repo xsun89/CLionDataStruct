@@ -23,10 +23,11 @@ private:
 template <class T>
 MaxHeap<T>::MaxHeap(int mx)
 {
-    if(currentSize == maxSize)
-        throw "alread reach max";
+    if(mx < 1)
+        throw "max size must be >= 1";
     maxSize = mx;
     heapArray = new T[maxSize];
+    currentSize = 0;
 }
 
 template <class T>
@@ -42,7 +43,37 @@ bool MaxHeap<T>::IsEmpty()
 }
 
 template <class T>
-void MaxHeap<T>::Push(const T &)
+void MaxHeap<T>::Push(const T& e)
+{
+    if(currentSize == maxSize)
+        throw "MaxHeap id full";
+
+    heapArray[currentSize] = e;
+    trickleUp(currentSize++);
+}
+
+template <class T>
+void MaxHeap<T>::trickleUp(int index)
+{
+    int parent = (index -1)/2;
+    T bottom = heapArray[index];
+    while(index > 0 && heapArray[parent] < bottom)
+    {
+        heapArray[index] = heapArray[parent];
+        index = parent;
+        parent = (parent-1)/2;
+    }
+    heapArray[index] = bottom;
+}
+
+template <class T>
+const T& MaxHeap<T>::Top() const
+{
+    return heapArray[0];
+}
+
+template <class T>
+void MaxHeap<T>::trickleDown(int index)
 {
 
 }
