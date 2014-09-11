@@ -26,6 +26,7 @@ MaxHeap<T>::MaxHeap(int mx)
     if(mx < 1)
         throw "max size must be >= 1";
     maxSize = mx;
+
     heapArray = new T[maxSize];
     currentSize = 0;
 }
@@ -75,7 +76,6 @@ const T& MaxHeap<T>::Top() const
 template <class T>
 void MaxHeap<T>::trickleDown(int index)
 {
-
 }
 
 #endif
