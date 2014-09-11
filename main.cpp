@@ -13,6 +13,15 @@ int main()
     h.Push(90);
     h.Push(35);
     cout << h.Top() << endl;
+    h.Pop();
+    cout << h.Top() << endl;
+    h.Pop();
+    cout << h.Top() << endl;
+    h.Pop();
+    cout << h.Top() << endl;
+    h.Pop();
+    cout << h.Top() << endl;
+    cout << "OK" << endl;
 
     return 0;
 }
