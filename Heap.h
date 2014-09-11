@@ -75,7 +75,7 @@ const T& MaxHeap<T>::Top() const
 template <class T>
 void MaxHeap<T>::Pop()
 {
-    heapArray[0] = heapArray[currentSize--];
+    heapArray[0] = heapArray[--currentSize];
     trickleDown(0);
 }
 

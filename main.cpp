@@ -5,23 +5,22 @@ using namespace std;
 int main()
 {
     MaxHeap<int> h(100);
-    cout <<h.IsEmpty() << endl;
-    h.Push(20);
-    h.Push(30);
-    h.Push(15);
-    cout << h.Top() << endl;
-    h.Push(90);
-    h.Push(35);
-    cout << h.Top() << endl;
-    h.Pop();
-    cout << h.Top() << endl;
-    h.Pop();
-    cout << h.Top() << endl;
-    h.Pop();
-    cout << h.Top() << endl;
-    h.Pop();
-    cout << h.Top() << endl;
-    cout << "OK" << endl;
 
+    int arr[] = {62,3,90,27,33,8,12,9,43,66};
+
+    for(int i=0; i<10; i++)
+        h.Push(arr[i]);
+
+    for(int i=0; i<10; i++)
+    {
+        arr[i] = h.Top();
+        h.Pop();
+    }
+
+    for(int i=0; i<10; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+
+    cout << "OK" << endl;
     return 0;
 }
