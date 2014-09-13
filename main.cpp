@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Heap.h"
+#include "QuickSort.h"
 using namespace std;
 
 int main()
@@ -22,6 +23,11 @@ int main()
     h.Pop();
     cout << h.Top() << endl;
     cout << "OK" << endl;
+/****************************************************/
+    int k[] = {8,6,4,2,0,1,3,5,7,9,99};
+    QuickSort(k,0,10);
+    for(int i=0; i<11; i++)
+        cout << k[i] << endl;
 
     return 0;
 }
