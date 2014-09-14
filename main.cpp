@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Heap.h"
 #include "QuickSort.h"
+#include "MergeSort.h"
 using namespace std;
 
 int main()
@@ -28,6 +29,10 @@ int main()
     QuickSort(k,0,9);
     for(int i=0; i<11; i++)
         cout << k[i] << endl;
+    int intArray[5] = { 23 , 8 , 1 , 6 , 10};
+    MergeSort(intArray,5);//执行排序
+    for( int i = 0; i < 5; i++)
+        cout << intArray[i] << endl;
 
     return 0;
 }
