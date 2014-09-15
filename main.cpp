@@ -30,7 +30,8 @@ int main()
     for(int i=0; i<11; i++)
         cout << k[i] << endl;
     int intArray[5] = { 23 , 8 , 1 , 6 , 10};
-    MergeSort(intArray,5);//执行排序
+    //MergeSort(intArray,5);//执行排序
+    merge_sort(intArray, 5);
     for( int i = 0; i < 5; i++)
         cout << intArray[i] << endl;
 
