@@ -31,10 +31,13 @@ void RadixSort(int *t, int n)
     int maxDigit = getMaxDigit(t, n);
     int* temp = new int[n];
     list<int> *myList = new list<int>[n];
+    for(i=0; i<n;i++)
+    {
+        temp[i] = t[i];
+    }
     for(j=1; j<=maxDigit; j++) {
-        d = d * 10;
         for (i = 0; i < n; i++) {
-            myList[t[i]%d].push_back(t[i]);
+            myList[(temp[i]/d)%10].push_back(temp[i]);
         }
         i=0;
         for(k=0; k<n; k++) {
@@ -43,8 +46,11 @@ void RadixSort(int *t, int n)
                 myList[k].pop_front();
             }
         }
-        for(i = 0; i<n; i++)
-            cout << t[i] << " ";
+        cout << "print results" << endl;
+        for(i = 0; i<n; i++) {
+            cout << temp[i] << " ";
+        }
         cout << endl;
+        d = d * 10;
     }
 };
