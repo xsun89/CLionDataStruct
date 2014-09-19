@@ -43,5 +43,8 @@ void RadixSort(int *t, int n)
                 myList[k].pop_front();
             }
         }
+        for(i = 0; i<n; i++)
+            cout << t[i] << " ";
+        cout << endl;
     }
 };
